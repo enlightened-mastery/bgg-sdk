@@ -98,6 +98,7 @@ type ApiResponseLink = {
     type: string;
     id: string;
     value: string;
+    inbound: boolean;
   };
 };
 
@@ -486,6 +487,7 @@ const transformData = (data: ApiResponse): PayloadThing => {
             type: link._attributes.type,
             id: link._attributes.id,
             value: link._attributes.value,
+            inbound: link._attributes.inbound,
           };
         }),
         polls: transformPoll(enforceArray(data.poll)),
