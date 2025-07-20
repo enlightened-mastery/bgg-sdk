@@ -474,14 +474,14 @@ const transformData = (data: ApiResponse): PayloadThing => {
             value: name._attributes.value,
           };
         }),
-        description: data.description._text,
-        yearPublished: data.yearpublished._attributes.value,
-        minPlayers: data.minplayers._attributes.value,
-        maxPlayers: data.maxplayers._attributes.value,
-        playingTime: data.playingtime._attributes.value,
-        minPlayTime: data.minplaytime._attributes.value,
-        maxPlayTime: data.maxplaytime._attributes.value,
-        minAge: data.minage._attributes.value,
+        description: data.description?._text ?? null,
+        yearPublished: data.yearpublished?._attributes?.value ?? null,
+        minPlayers: data.minplayers?._attributes?.value ?? null,
+        maxPlayers: data.maxplayers?._attributes?.value ?? null,
+        playingTime: data.playingtime?._attributes?.value ?? null,
+        minPlayTime: data.minplaytime?._attributes?.value ?? null,
+        maxPlayTime: data.maxplaytime?._attributes?.value ?? null,
+        minAge: data.minage?._attributes?.value ?? null,
         links: enforceArray(data.link).map((link) => {
           return {
             type: link._attributes.type,
