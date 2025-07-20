@@ -10,3 +10,12 @@
 .DS_Store
 
 /docs
+.idea/.gitignore
+.idea/bgg-sdk.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/prettier.xml
+.idea/vcs.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/codeStyles/Project.xml
+.idea/inspectionProfiles/Project_Default.xml

@@ -574,12 +574,12 @@ const transformData = (data: ApiResponse): PayloadThing => {
                   value: name._attributes.value,
                 };
               }),
-              yearPublished: item.yearpublished._attributes.value,
-              productCode: item.productcode._attributes.value,
-              width: item.width._attributes.value,
-              length: item.length._attributes.value,
-              depth: item.depth._attributes.value,
-              weight: item.weight._attributes.value,
+              yearPublished: item.yearpublished?._attributes?.value ?? null,
+              productCode: item.productcode?._attributes?.value ?? null,
+              width: item.width?._attributes?.value ?? null,
+              length: item.length?._attributes?.value ?? null,
+              depth: item.depth?._attributes?.value ?? null,
+              weight: item.weight?._attributes?.value ?? null,
             };
           }),
         videos: data.videos && {
