@@ -372,7 +372,7 @@ const transformPollLanguageDependence = (
     name: poll._attributes.name,
     title: poll._attributes.title,
     totalvotes: poll._attributes.totalvotes,
-    results: enforceArray(poll.results.result).map((result) => {
+    results: enforceArray(poll.results?.result).map((result) => {
       return {
         level: result._attributes.level,
         value: result._attributes.value,
@@ -389,7 +389,7 @@ const transformPollSuggestedPlayerAge = (
     name: poll._attributes.name,
     title: poll._attributes.title,
     totalvotes: poll._attributes.totalvotes,
-    results: enforceArray(poll.results.result).map((result) => {
+    results: enforceArray(poll.results?.result).map((result) => {
       return {
         value: result._attributes.value,
         numvotes: result._attributes.numvotes,
